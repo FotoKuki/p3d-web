@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.env*
+!.env.example
+.p3d-data/
+
+.vercel

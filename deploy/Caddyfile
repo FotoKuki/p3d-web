@@ -1,0 +1,12 @@
+# เปลี่ยนชื่อโดเมนด้านล่างเป็นโดเมน DuckDNS (หรือ Custom Domain) ของคุณ
+# เช่น p3dprint.duckdns.org และ p3dprint-admin.duckdns.org
+
+p3dprint.duckdns.org {
+  encode zstd gzip
+  reverse_proxy 127.0.0.1:3000
+}
+
+p3dprint-admin.duckdns.org {
+  encode zstd gzip
+  reverse_proxy 127.0.0.1:3001
+}

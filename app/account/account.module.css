@@ -1,0 +1,202 @@
+.headerActions { display: flex; align-items: center; gap: 8px; }
+.workspace {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 37px 30px 55px;
+}
+.heading, .cardHeading, .addressHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+.heading { margin-bottom: 21px; align-items: center; }
+.heading h1 { margin: 0; font-size: clamp(1.85rem, 4vw, 2.5rem); letter-spacing: -.035em; }
+.heading p { margin: 3px 0 0; color: var(--muted); overflow-wrap: anywhere; }
+.layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: start;
+  gap: 22px;
+}
+.sidebar {
+  display: grid;
+  gap: 5px;
+  padding: 7px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  position: sticky;
+  top: 16px;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 43px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 650;
+}
+.sidebar a:hover { background: var(--wash); color: var(--blue-dark); }
+.sidebar a span { margin-left: auto; color: var(--muted); }
+.sidebar svg { flex: none; color: var(--blue-dark); }
+.content { display: grid; gap: 15px; min-width: 0; }
+.card, .signInCard {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 22px;
+  scroll-margin-top: 15px;
+}
+.cardHeading { margin-bottom: 17px; }
+.card h2, .signInCard h2 { font-size: 1.22rem; margin: 0; font-weight: 750; }
+.cardHeading p, .signInCard > p { margin: 3px 0 0; color: var(--muted); font-size: .92rem; }
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px 16px;
+}
+.fields label { display: grid; align-content: start; gap: 6px; font-weight: 650; font-size: .9rem; }
+.fields .fullField { grid-column: 1 / -1; }
+.fields input, .fields textarea {
+  width: 100%;
+  min-height: 43px;
+  padding: 9px 11px;
+  border: 1px solid var(--control-line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 500;
+}
+.fields textarea { resize: vertical; }
+.fields input:read-only { background: var(--surface-muted); color: var(--muted); }
+.formFooter, .editorActions, .deletePrompt {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.formFooter p { margin: 0 auto 0 0; }
+.primary, .secondary, .lineButton, .danger, .headerLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 41px;
+  padding: 7px 13px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: .875rem;
+  white-space: nowrap;
+}
+.primary { background: var(--accent-fill); color: var(--on-accent); }
+.primary:hover:not(:disabled) { background: var(--accent-hover); }
+.secondary, .headerLink { background: var(--paper); color: var(--blue-dark); border-color: var(--control-line); text-decoration: none; }
+.secondary:hover:not(:disabled), .headerLink:hover { background: var(--wash); }
+.lineButton { background: #007a45; color: white; }
+.lineButton:hover:not(:disabled) { background: #00653a; }
+.danger { color: white; background: #a3263d; }
+.danger:hover:not(:disabled) { background: #8a1d31; }
+.addressList { margin: 0; padding: 0; display: grid; gap: 9px; list-style: none; }
+.addressCard, .addressEditor, .empty {
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+  border-radius: 10px;
+  padding: 13px;
+}
+.addressEditor { margin: 0 0 10px; }
+.addressList .addressEditor { margin-bottom: 0; }
+.addressCard h3, .addressEditor h3 { margin: 0 0 3px; font-size: 1rem; }
+.addressEditor h3 { margin-bottom: 12px; }
+.addressHeading p, .addressMeta, .street { margin: 0; font-size: .9rem; }
+.addressHeading p, .addressMeta { color: var(--muted); }
+.street { margin: 8px 0 3px; white-space: pre-wrap; }
+.addressCard p, .addressCard h3 { overflow-wrap: anywhere; }
+.addressActions { display: flex; flex: none; gap: 4px; }
+.addressActions button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--control-line);
+  border-radius: 8px;
+  color: var(--blue-dark);
+  background: var(--paper);
+}
+.addressActions button:hover { background: var(--wash); }
+.deletePrompt { justify-content: flex-start; font-size: .86rem; }
+.empty, .linked { display: flex; align-items: center; gap: 8px; }
+.empty, .configNote { color: var(--muted); font-size: .9rem; }
+.configNote, .linked { margin: 0; }
+.linked, .success { color: var(--success-text); font-weight: 650; }
+.success, .error { font-size: .9rem; margin: 6px 0 10px; }
+.error { color: var(--error-text); }
+.signInCard {
+  max-width: 440px;
+  margin: 24px auto 0;
+  text-align: center;
+  padding: 32px 28px;
+  border-radius: 18px;
+}
+.signInCard form { margin-top: 12px; }
+.signInCard button { width: 100%; min-height: 46px; font-size: 0.94rem; }
+.signInIcon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  border-radius: 14px;
+  color: var(--blue);
+  background: var(--wash);
+}
+.googleBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  padding: 8px 16px;
+  border: 1px solid var(--control-line);
+  border-radius: 10px;
+  background: var(--surface-muted);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+.googleBtn:hover:not(:disabled) {
+  background: var(--wash);
+  border-color: var(--control-hover);
+}
+.pageFooter {
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  margin-top: 48px;
+  padding: 20px 28px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+@media (max-width: 700px) {
+  .workspace { padding: 24px 16px 40px; }
+  .heading { align-items: flex-start; }
+  .layout { grid-template-columns: 1fr; gap: 13px; }
+  .sidebar { position: static; display: flex; flex-wrap: wrap; }
+  .sidebar a { min-height: 37px; }
+  .card, .signInCard { padding: 15px; }
+}
+@media (max-width: 480px) {
+  .fields { grid-template-columns: 1fr; }
+  .cardHeading { flex-wrap: wrap; }
+}

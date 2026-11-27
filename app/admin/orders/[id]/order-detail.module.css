@@ -1,0 +1,346 @@
+.page {
+  display: grid;
+  gap: 20px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  justify-self: start;
+  padding: 6px 12px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 650;
+  transition: color 140ms ease, border-color 140ms ease, background-color 140ms ease;
+}
+
+.backLink:hover {
+  color: var(--ink);
+  border-color: var(--control-hover);
+  background: var(--surface-muted);
+}
+
+/* Hero Summary Card */
+.heroCard {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.heroTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 22px;
+}
+
+.heroLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.heroMeta {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.heroTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.heroTitleRow h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.statusPending {
+  background: var(--amber-bg);
+  color: var(--amber-ink);
+}
+
+.statusActive {
+  background: var(--wash);
+  color: var(--blue-dark);
+}
+
+.statusDone {
+  background: color-mix(in srgb, var(--success-text) 15%, transparent);
+  color: var(--success-text);
+}
+
+.heroFile {
+  font-size: 0.96rem;
+  font-weight: 650;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.heroDate {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.heroRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.totalBox {
+  text-align: right;
+  display: grid;
+  gap: 2px;
+}
+
+.totalBox span {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.totalBox strong {
+  font-size: 1.45rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: var(--accent-fill);
+  color: var(--on-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 750;
+  transition: background-color 140ms ease, transform 120ms ease;
+}
+
+.downloadBtn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* Progress Strip */
+.progressBar {
+  padding: 14px 22px 16px;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface-muted) 65%, var(--paper));
+  display: grid;
+  gap: 10px;
+}
+
+.progressSteps {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.progressStep {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.stepLine {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.stepDone .stepLine {
+  background: var(--success-text);
+}
+
+.stepCurrent .stepLine {
+  background: var(--blue);
+}
+
+.stepLabel {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stepDone .stepLabel {
+  color: var(--ink);
+}
+
+.stepCurrent .stepLabel {
+  color: var(--blue-dark);
+  font-weight: 750;
+}
+
+/* Two-Column Workspace */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.leftCol,
+.rightCol {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+  min-width: 0;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cardHead h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 750;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardHead svg {
+  color: var(--blue);
+}
+
+.specChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.specChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+  font-size: 0.83rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.details {
+  margin: 0;
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+
+.details > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.details dt {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.details dd {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.details a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.details a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progressSteps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTop {
+    padding: 16px;
+  }
+
+  .totalBox {
+    text-align: left;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .details > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}

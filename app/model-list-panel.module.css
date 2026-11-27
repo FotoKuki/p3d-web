@@ -1,0 +1,306 @@
+.panel {
+  margin: 14px 15px 16px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface-muted);
+  display: grid;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.headerActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clearBtn {
+  min-height: 32px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--control-line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 650;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.clearBtn:hover:not(:disabled) {
+  background: var(--wash);
+  border-color: var(--control-hover);
+}
+
+.listIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+}
+
+/* Segmented Tabs */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--page);
+  border: 1px solid var(--line);
+}
+
+.tabBtn {
+  min-height: 34px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.tabBtn:hover {
+  color: var(--ink);
+}
+
+.tabBtnActive {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+/* Dropzone */
+.dropzone {
+  width: 100%;
+  min-height: 54px;
+  padding: 10px 14px;
+  border-radius: 11px;
+  border: 1.5px dashed var(--control-line);
+  background: var(--paper);
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
+}
+
+.dropzone:hover:not(:disabled),
+.dropzoneDragging {
+  border-color: var(--blue);
+  background: var(--wash);
+  color: var(--ink);
+}
+
+.demoBtn {
+  justify-self: center;
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--blue-dark);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.demoBtn:hover:not(:disabled) {
+  background: var(--wash);
+}
+
+/* Model Item Cards */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  background: var(--paper);
+  display: grid;
+  gap: 10px;
+  cursor: pointer;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  border-color: var(--control-hover);
+}
+
+.cardActive {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 45%, transparent);
+}
+
+.cardTop {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 11px;
+  align-items: center;
+}
+
+.thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 9px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--page);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.thumbFallback {
+  color: var(--muted);
+}
+
+.cardInfo {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fileName {
+  font-size: 0.94rem;
+  font-weight: 750;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trashBtn {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.trashBtn:hover {
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+
+.dims {
+  font-size: 0.77rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.specs {
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: var(--ink);
+  opacity: 0.88;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fdmBadge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--success-text) 45%, transparent);
+  background: color-mix(in srgb, var(--success-text) 12%, transparent);
+  color: var(--success-text);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.priceBadge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-fill);
+  color: var(--on-accent);
+  font-size: 0.76rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--control-line);
+  background: var(--surface-muted);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+}
+
+.stepper button:hover:not(:disabled) {
+  border-color: var(--blue);
+  background: var(--wash);
+}
+
+.stepper span {
+  min-width: 18px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
